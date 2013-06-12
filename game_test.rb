@@ -15,5 +15,13 @@ class GameTest < Test::Unit::TestCase
 		assert game.roll(0)
 	end
 
+	def test_it_should_return_zero_for_a_gutter_game
+		game = Game.new
+		20.times do
+			game.roll(0)
+		end
+		assert_equal game.score, 0
+	end
+
 
 end
