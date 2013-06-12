@@ -30,5 +30,12 @@ class GameTest < Test::Unit::TestCase
 		assert_equal game.score, 20
 	end
 
+	def test_game_can_account_for_spare
+		game = Game.new
+		game.roll(5)
+		game.roll(5)
+		game.roll(3)
+		assert_equal 17, game.score
+	end
 
 end
