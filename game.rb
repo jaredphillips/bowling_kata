@@ -16,4 +16,7 @@ class Game
 		@score
 	end
 
+	def git_test
+	end
+
 end
