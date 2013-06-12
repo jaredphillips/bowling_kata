@@ -25,7 +25,7 @@ class GameTest < Test::Unit::TestCase
 	def test_it_should_return_20_for_a_game_of_all_ones
 		game = Game.new
 		20.times do
-			game.roll(20)
+			game.roll(1)
 		end
 		assert_equal game.score, 20
 	end

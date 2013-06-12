@@ -3,15 +3,17 @@ class Game
 
 	attr_accessor :pins
 
-	def roll(pins)
-		pins
+	def initialize
+		@score = 0
 	end
 
-	def pins
+	def roll(pins)
+		@score = score + pins
 	end
+
 
 	def score
-		0
+		@score
 	end
 
 end
