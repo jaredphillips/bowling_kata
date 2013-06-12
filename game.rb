@@ -4,19 +4,26 @@ class Game
 	attr_accessor :pins
 
 	def initialize
-		@score = 0
+		@rolls = []
 	end
 
 	def roll(pins)
-		@score = score + pins
+		@rolls << pins
 	end
-
 
 	def score
-		@score
-	end
-
-	def git_test
-	end
-
+		score = 0
+		array_index = 0
+		frame = 0
+		while frame < 10
+			if @rolls[array_index] + @rolls[array_index + 1] == 10
+				score += 10 + @rolls[array_index + 2]
+				array_index += 2
+			else
+			  score += @rolls[array_index] + @rolls[array_index + 1]
+			  array_index += 2
+		  end
+		  score
+	  end
+  end
 end

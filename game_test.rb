@@ -35,7 +35,10 @@ class GameTest < Test::Unit::TestCase
 		game.roll(5)
 		game.roll(5)
 		game.roll(3)
-		assert_equal 17, game.score
+		17.times do
+		  game.roll(0)
+		end
+		assert_equal 16, game.score
 	end
 
 end
